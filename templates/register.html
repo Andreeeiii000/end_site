@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background: url(static/images/picture.jpg);">
+    <header>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            {{message}}
+          {% endfor %}
+        {% endif%}
+      {% endwith %}
+    </header>
+    <main>
+    </main>
+    <footer>
+        <div style="text-align: center;"><h1>Регистрация</h1></div>
+      <form method="post" action="/register">
+        <!-- <h4 style="color: rgb(96, 28, 28); background-color: yellow; padding-left: 50%; margin-top: 100px; border: 5px rgb(124, 129, 124) solid">Введите логин:</h4>
+        <input type="text" name="login" style="color: rgb(96, 28, 28); background-color: yellow; padding-left: 50%; margin-top: 100px; border: 5px lime solid">
+        <h4 style="color: rgb(96, 28, 28); background-color: yellow; padding-left: 50%; margin-top: 100px; border: 5px lime solid">Введите пароль</h4>
+        <input type="text" name="password">
+        <div style="text-align: center;"><input type="text" name="password"></div> -->
+        <div style="text-align: center;"><h4>Введите имя:</h4></div>
+        <div style="text-align: center;"><input type="text" name="login"></div>
+        <div style="text-align: center;"><h4>Введите логин:</h4></div>
+        <div style="text-align: center;"><input type="text" name="login"></div>
+        <div style="text-align: center;"><h4>Введите пароль:</h4></div>
+        <div style="text-align: center;"><input type="text" name="login"></div>
+        <br><br>
+        <div style="text-align: center;"><input type="submit" value="Save"></div>
+      </form>
+    </footer>
+  </body>
+</html>

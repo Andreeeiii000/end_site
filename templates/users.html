@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <a href="{{ url_for('register') }}"><h3>register</h3></a>
+    </header>
+    <main>
+      {%  for user in users  %}
+      <h1>{{ user['name']  }}</h1>
+      <h3>{{ user['login'] }}</h3>
+      <h3>{{ user['password'] }}</h3>
+      <h3>{{ user['description'] }}</h3>
+      {%  endfor  %}
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

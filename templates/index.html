@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' )}}">
+  </head>
+  <body class="gold_text">
+    <header>
+      <a href="{{ url_for('register') }}"><h3>register</h3></a>
+    </header>
+    <main>
+      <h1>Міста України</h1>
+      {%  for sity in sities  %}
+      <h1>{{ sity['name_']  }}</h1>
+      <img src="{{ sity['image_'] }}" width="500px", height="500px">
+      <h3>{{ sity['description_'] }}</h3>
+      {%  endfor  %}
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>
